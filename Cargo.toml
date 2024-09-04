@@ -1,0 +1,7 @@
+[package]
+name = "craft-cruncher"
+version = "0.1.0"
+authors = ["Thorinwasher", "Pheotis"]
+homepage = "https://craftcruncher.thorinwasher.dev"
+repository = "https://github.com/CraftCruncher/CraftCruncher"
+edition = "2021"
