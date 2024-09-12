@@ -20,5 +20,7 @@ name = "categorizer"
 name = "resolver"
 
 [dependencies]
+bytes = "1.7.1"
 getopt = "1.1.7"
 getopts = "0.2.21"
+postgres = "0.19.8"

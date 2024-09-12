@@ -7,7 +7,7 @@ fn main() {
     opts.reqopt(
         "p",
         "plugin-portal",
-        "Where to fetch the data from -f [fetcher type]",
+        "Where to fetch the data from -p [plugin portal]",
         "spiget dbo hangar modrinth",
     );
 
