@@ -1,9 +1,10 @@
 use std::fmt::Debug;
 use std::time::SystemTime;
 
-use bytes::BytesMut;
 use postgres::types::{accepts, to_sql_checked, FromSql, ToSql};
+use serde::{Deserialize, Serialize};
 
+#[derive(Serialize, Deserialize)]
 pub struct VersionData {
     pub version: String,
     pub date: SystemTime,

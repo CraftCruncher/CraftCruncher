@@ -1,9 +1,8 @@
 use std::time::SystemTime;
 
 pub struct Author {
-    name: String,
-    id: u16,
-    plugins: Vec<u16>,
-    created_date: SystemTime,
-    plugin_portals: Vec<String>,
+    pub name: String,
+    pub creation_date: SystemTime,
+    pub plugin_portal: String,
+    pub plugin_portal_identifier: String,
 }

@@ -1,15 +1,15 @@
 use postgres::Row;
 
-use super::version_data::VersionData;
+use super::{author::Author, version_data::VersionData};
 
 pub struct PluginMeta {
     pub plugin_name: String,
     pub artefact_name: String,
     pub versions: Vec<VersionData>,
-    pub authors: Vec<String>,
     pub source: String,
     pub tags: Vec<String>,
     pub links: Vec<String>,
+    pub authors: Vec<Author>,
 }
 
 impl PluginMeta {
@@ -18,10 +18,14 @@ impl PluginMeta {
             plugin_name: row.get("pluginName"),
             artefact_name: row.get("artefactName"),
             versions: row.get("versions"),
-            authors: row.get("authors"),
             source: row.get("source"),
-            tags: row.get("tags"),
+            tags: row.get("tag"),
             links: row.get("links"),
+            authors: Vec::new(),
         }
+    }
+
+    pub fn add_author(self: &mut Self, author: Author) {
+        self.authors.push(author);
     }
 }
